@@ -1,1 +1,1 @@
-# Sequalize-music
+# Sequelize-music
