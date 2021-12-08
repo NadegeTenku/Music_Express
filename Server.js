@@ -22,7 +22,7 @@ app.get('/musicians', async (req,res) => {
 })
 
 app.get('/genre/:id', async (req,res) => {
-    const thisGenre = await Genre.findByPk({where: {id: req.params.id}})
+    const thisGenre = await Genre.findByPk(req.params.id)
     res.json(thisGenre)
 })
 
