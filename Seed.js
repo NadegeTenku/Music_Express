@@ -5,6 +5,9 @@ const {Musician} = require('./models/Musician')
 const {Genre} = require('./models/Genre')
 const {Album} = require('./models/Album')
 
+Musician.belongsTo(Producer)
+Producer.hasMany(Musician)
+
 const seedProducer = [
     {
         proName: 'Mr. Leo',
@@ -102,3 +105,5 @@ const seed = async () => {
       console.error('Oh no! Something went wrong!')
       console.error(err)
     })
+
+    module.exports = {Producer, Musician, Genre, Album, sequelize}
